@@ -1,0 +1,14 @@
+<div class='new-group'>
+  <%= form_with(model: @group) do |form| %>
+    <h1> Create Group </h1>
+    <div>
+      <%= form.label :icon %>
+      <%= form.text_field :icon %>
+    </div>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+    <%= form.submit "Create" %>
+  <% end %>
+</div>
