@@ -1,16 +1,11 @@
 <div>
   <ul>
     <% @groups.each do |group| %>
-      <li>
-        <%= link_to group do %>
-          <div>
-            <%= image_tag group.icon, alt: group.name %>
-            <h2><%= group.name %></h2>
-            <p><%= group.created_at.strftime('%Y-%b-%d') %></p>
-            <p><%= group.products.sum {|product|product[:amount]} %></p>
-          </div>
-        <% end %>
-      </li>
+      <%= link_to group do %>
+        <li>
+          <%= render "shared/group", group: group %>
+        </li>
+      <% end %>
     <% end %>
   </ul>
   <%= button_to "Add Category", new_group_path, method: :get %>
