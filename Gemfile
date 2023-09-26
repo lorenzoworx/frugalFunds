@@ -6,6 +6,9 @@ ruby '3.2.2'
 # Add rubocop the ruby linter/formatter
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# ADD Devise for user authentication
+gem 'devise', github: 'heartcombo/devise', branch: 'main'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.8'
 
