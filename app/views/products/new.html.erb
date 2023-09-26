@@ -1,0 +1,15 @@
+<div class="new-product">
+  <%= form_with(model: ([@group, @product])) do |form| %>
+    <h1>Create Transaction</h1>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+    <div>
+      <%= form.label :amount %>
+      <%= form.number_field :name %>
+    </div>
+    <%= form.hidden_field :group_ids, value:[@group] %>
+    <%= form.submit "Create" %>
+  <% end %>
+</div>
