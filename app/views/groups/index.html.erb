@@ -1,6 +1,10 @@
-<% content_for :page_name, "Groups" %>
+<% content_for :back_path, root_path%>
 <div>
   <ul>
+    <% content_for :page_name, "Groups" %>
+    <% content_for :nav_button do %>
+      <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
+    <% end %>
     <% @groups.each do |group| %>
       <%= link_to group do %>
         <li>
@@ -9,5 +13,5 @@
       <% end %>
     <% end %>
   </ul>
-  <%= button_to "Add Category", new_group_path, method: :get %>
+  <%= button_to "Add Group", new_group_path, method: :get %>
 </div>
