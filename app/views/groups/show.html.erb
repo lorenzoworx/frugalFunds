@@ -1,0 +1,13 @@
+<div>
+  <ul>
+    <% @products.each do |product| %>
+      <li>
+        <h2> <%= product.name %> </h2>
+        <p> <%= product.amount %> </p>
+        <p> <%= product.created_at.strftime('%Y-%b-%d') %> </p>
+        <p>Total</p>
+      </li>
+    <% end %>
+  </ul>
+  <%= button_to 'Add Transaction', new_group_product_path(@group), method: :get %>
+</div>
