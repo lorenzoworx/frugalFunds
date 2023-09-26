@@ -9,5 +9,10 @@ class GroupsController < ApplicationController
     @products = @group.products
   end
 
- 
+  def new
+    @group = Group.new
+  end
+
+  
+
 end
