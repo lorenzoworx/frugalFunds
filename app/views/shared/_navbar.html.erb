@@ -1,0 +1,15 @@
+<nav>
+  <%= link_to(:back) do %>
+    <button>back</button>
+  <% end %>
+
+  <div>
+    <span> <%= yield(:page_name) %> </span>
+  </div>
+
+  <ul>
+    <li>
+      <a href="#">Logout</a>
+    </li>
+  </ul>
+</nav>
