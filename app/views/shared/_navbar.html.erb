@@ -1,22 +1,24 @@
-<nav>
-  <% if content_for?(:page_name) %>
-    <%= link_to yield(:back_path) do %>
-      <button>back</button>
+<% unless content_for?(:nav_bar) %>
+  <nav>
+    <% if content_for?(:page_name) %>
+      <%= link_to yield(:back_path) do %>
+        <button>back</button>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <% if content_for?(:page_name) %>  
-    <div>
-      <span> <%= yield(:page_name) %> </span>
-    </div>
-  <% end %>
+    <% if content_for?(:page_name) %>  
+      <div>
+        <span> <%= yield(:page_name) %> </span>
+      </div>
+    <% end %>
 
-  <% if content_for?(:nav_button) %>
-    <ul>
-      <li>
-        <%= yield(:nav_button) %>
-        <a href="#">Logout</a>
-      </li>
-    </ul>
-  <% end %>
-</nav>
+    <% if content_for?(:nav_button) %>
+      <ul>
+        <li>
+          <%= yield(:nav_button) %>
+          <a href="#">Logout</a>
+        </li>
+      </ul>
+    <% end %>
+  </nav
+<% end %>
