@@ -4,7 +4,7 @@
   <%= button_to "Logout", destroy_user_session_path, method: :delete %>
 <% end %>
 <div>
-  <%= render "shared/category", category: @group %>
+  <%= render "shared/group", group: @group %>
   <ul>
     <% @products.each do |product| %>
       <li>
