@@ -8,13 +8,16 @@
     <h1>Create Transaction</h1>
     <div>
       <%= form.label :name %>
-      <%= form.text_field :name %>
+      <%= form.text_field :name, required: true %>
     </div>
     <div>
       <%= form.label :amount %>
-      <%= form.number_field :name %>
+      <%= form.number_field :name, required: true, min: 1 %>
     </div>
-    <%= form.hidden_field :group_ids, value:[@group] %>
+    <div>
+      <%= form.label "Group" %>
+      <%= form.collection_select :group_ids, current_user.groups, :id, :name, {}, { multiple: true, required: true } %>
+    </div>
     <%= form.submit "Create" %>
   <% end %>
 </div>
