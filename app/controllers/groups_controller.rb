@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = current_user.groups.find(params[:id])
-    @products = @group.products.order(created at: :asc)
+    @products = @group.products.order(created_at: :asc)
   end
 
   def new
