@@ -1,4 +1,10 @@
+<% content_for :back_path, root_path %>
+<% content_for :page_name, "Transaction" %>
+<% content_for :nav_button do %>
+  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+<% end %>
 <div>
+  <%= render "shared/category", category: @group %>
   <ul>
     <% @products.each do |product| %>
       <li>

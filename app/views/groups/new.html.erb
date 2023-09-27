@@ -1,3 +1,8 @@
+<% content_for :back_path, root_path %>
+<% content_for :page_name, "Create Group" %>
+<% content_for :nav_button do %>
+  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+<% end %>
 <div class='new-group'>
   <%= form_with(model: @group) do |form| %>
     <h1> Create Group </h1>
