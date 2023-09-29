@@ -1,6 +1,8 @@
 <% content_for :nav_bar, 'navbar not required' %>
-<div>
+<div class='splash-container'>
   <h1>Welcome to Frugal Funds!!</h1>
-  <%= link_to "log in", new_user_session_path %>
-  <%= link_to "sign up", new_user_registration_path %>
+  <div class='splash-authentication'>
+    <%= link_to "Log in", new_user_session_path %>
+    <%= link_to "Sign up", new_user_registration_path %>  
+  </div>
 </div>

@@ -2,23 +2,18 @@
   <nav>
     <% if content_for?(:page_name) %>
       <%= link_to yield(:back_path) do %>
-        <button>back</button>
+        <i class="fas fa-arrow-left icon-white"></i>
       <% end %>
     <% end %>
 
     <% if content_for?(:page_name) %>  
       <div>
-        <span> <%= yield(:page_name) %> </span>
+        <span class='page-name'> <%= yield(:page_name) %> </span>
       </div>
     <% end %>
 
     <% if content_for?(:nav_button) %>
-      <ul>
-        <li>
-          <%= yield(:nav_button) %>
-          <a href="#">Logout</a>
-        </li>
-      </ul>
+      <%= yield(:nav_button) %>
     <% end %>
-  </nav
+  </nav>
 <% end %>

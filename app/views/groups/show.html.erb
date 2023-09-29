@@ -1,19 +1,22 @@
 <% content_for :back_path, root_path %>
-<% content_for :page_name, "Transaction" %>
+<% content_for :page_name, "Transactions" %>
 <% content_for :nav_button do %>
-  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+  <%= button_to destroy_user_session_path, class:'logout-btn', method: :delete do %>
+    <i class="fas fa-sign-out-alt icon-white"></i> Logout
+  <% end %>
 <% end %>
-<div>
-  <%= render "shared/group", group: @group %>
-  <ul>
+<ul class='transaction-list'>
+  <li class='group-transactions'>
+    <%= render "shared/group", group: @group %>
+  </li>
     <% @products.each do |product| %>
-      <li>
-        <h2> <%= product.name %> </h2>
-        <p> <%= product.amount %> </p>
-        <p> <%= product.created_at.strftime('%d %b %Y at %l:%M %P') %> </p>
-        <p>Total</p>
+      <li class='transaction-details'>
+        <div>
+          <h2>Product Name: <%= product.name %> </h2>
+          <p>Amount: $<%= product.amount %> </p>
+        </div>
+        <p>Created at: <%= product.created_at.strftime('%d %b %Y at %l:%M %P') %> </p>
       </li>
     <% end %>
-  </ul>
   <%= button_to 'Add Transaction', new_group_product_path(@group), method: :get %>
-</div>
+</ul>

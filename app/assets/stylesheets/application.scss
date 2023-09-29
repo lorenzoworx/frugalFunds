@@ -1,0 +1,372 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap";
+
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('app/assets/fonts/proximanova/Demo_Fonts/Fontspring-DEMO-proximanova-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: url('app/assets/fonts/proximanova/Demo_Fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Italic';
+  src: url('app/assets/fonts/proximanova/Demo_Fonts/Fontspring-DEMO-proximanova-regularit.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: 'ProximaNova', sans-serif;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  color: #434b54;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f1f1f1 !important
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3778c2;
+  padding: 10px;
+}
+
+nav > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logout-btn {
+  background-color: #3778c2;
+  color: #fff;
+  
+}
+
+.page-name {
+  color: #fff;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.splash-authentication {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.splash-authentication > a {
+  text-decoration: none;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+  color: #434b54;
+  background-color: #fff;
+}
+
+.splash-authentication > a:hover {
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.authentication-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+
+.authentication-rememberable {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  
+}
+
+.group-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center;
+}
+
+.group-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+  width: 80%;
+  padding: 0;
+}
+
+.group-list-item {
+  border: 1px solid;
+  border-radius: 10px;
+
+}
+
+.group-list-item > a {
+  text-decoration: none;
+}
+
+.group-list-item > a > div {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 5px;
+}
+
+.group-list-item > a > div > div {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-list-item > a > div > div > img {
+  width: 100px;
+  height: 100px;
+}
+
+.group-container > form {
+  width: 60vw;
+  height: 50px;
+}
+
+.group-container > form > button {
+  width: 100%;
+  height: 100%;
+  background-color: #3778c2;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.group-container > form > button:hover {
+  background-color: #5fb523;
+}
+
+.transaction-list {
+  list-style: none;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+}
+
+.transaction-list > li {
+  width: 80vw;
+  background-color: #fff;
+}
+
+.group-transactions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.group-transactions > div > :first-child{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.group-transactions > div > :nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.transaction-details {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #434b54;
+  border-radius: 10px;
+}
+
+.transaction-details > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.transaction-list > form {
+  width: 60vw;
+  height: 50px;
+}
+
+.transaction-list > form > button {
+  width: 100%;
+  height: 100%;
+  background-color: #3778c2;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.transaction-list > form > button:hover {
+  background-color: #5fb523;
+}
+
+.new-user {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  align-items: center;
+}
+
+.field > p > input {
+  width: 80vw;
+  border-top: #434b54 1px solid;
+  border-bottom: #434b54 1px solid;
+  height: 35px;
+  padding: 5px;
+}
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  align-items: center;
+}
+
+#user_remember_me {
+  width: 160%;
+}
+
+.new-group {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
+.new-group > form {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.new-group > form > div > input {
+  width: 80vw;
+  border-top: #434b54 1px solid;
+  border-bottom: #434b54 1px solid;
+  height: 35px;
+  padding: 5px;
+}
+
+.submit-btn {
+  width: 60vw;
+  height: 50px;
+  background-color: #3778c2;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #5fb523;
+}
+
+.new-transaction {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
+.new-transaction > form {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.new-transaction > form > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 60vw;
+  gap: 20px;
+}
+
+.new-transaction > form > div > input {
+  border: #434b54 1px solid;
+  border-radius: 5px;
+  height: 35px;
+  padding: 5px;
+}
+
+.new-transaction > form > div > label {
+  width: 60px;
+  padding: 5px;
+}
+
+.new-transaction > form > div > select {
+  width: 240px;
+  padding: 5px;
+  border: #434b54 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.icon-white {
+  color: white;
+}

@@ -1,9 +1,11 @@
 <% content_for :back_path, root_path %>
-<% content_for :page_name, "Transaction" %>
+<% content_for :page_name, "New Transactions" %>
 <% content_for :nav_button do %>
-  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+  <%= button_to destroy_user_session_path, class:'logout-btn', method: :delete do %>
+    <i class="fas fa-sign-out-alt icon-white"></i> Logout
+  <% end %>
 <% end %>
-<div class="new-product">
+<div class="new-transaction">
   <%= form_with(model: ([@group, @product])) do |form| %>
     <h1>Create Transaction</h1>
     <div>
@@ -12,12 +14,12 @@
     </div>
     <div>
       <%= form.label :amount %>
-      <%= form.number_field :name, required: true, min: 1 %>
+      <%= form.number_field :amount, required: true, min: 1 %>
     </div>
     <div>
       <%= form.label "Group" %>
       <%= form.collection_select :group_ids, current_user.groups, :id, :name, {}, { multiple: true, required: true } %>
     </div>
-    <%= form.submit "Create" %>
+    <%= form.submit "Create", class: 'submit-btn' %>
   <% end %>
 </div>

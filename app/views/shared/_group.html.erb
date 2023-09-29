@@ -1,6 +1,10 @@
 <div>
-  <%= image_tag group.icon, alt: group.name %>
-  <h2><%= group.name %></h2>
-  <p><%= group.created_at.strftime('%d %b %Y') %></p>
-  <p><%= group.products.sum {|product|product[:amount]} %></p>
+  <div>
+    <%= image_tag group.icon, alt: group.name %>
+    <h2><%= group.name %></h2>  
+  </div>
+  <div>
+    <p><%= group.created_at.strftime('%d %b %Y') %></p>
+    <p><%= group.products.sum {|product|product[:amount]} %></p>  
+  </div>
 </div>
