@@ -1,0 +1,19 @@
+<% content_for :back_path, root_path%>
+<% content_for :page_name, "Groups" %>
+<% content_for :nav_button do %>
+  <%= button_to destroy_user_session_path, class:'logout-btn', method: :delete do %>
+    <i class="fas fa-sign-out-alt icon-white"></i> Logout
+  <% end %>
+<% end %>
+<div class='group-container'>
+  <ul class='group-list'>
+    <% @groups.each do |group| %>
+      <li class='group-list-item'>
+        <%= link_to group do %>
+          <%= render "shared/group", group: group %>
+        <% end %>
+       </li>
+    <% end %>
+  </ul>
+  <%= button_to "Add Group", new_group_path, method: :get %>
+</div>

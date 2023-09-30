@@ -1,0 +1,19 @@
+<% content_for :back_path, root_path %>
+<% content_for :page_name, "Create Group" %>
+<% content_for :nav_button do %>
+  <%= button_to destroy_user_session_path, class:'logout-btn', method: :delete do %>
+    <i class="fas fa-sign-out-alt icon-white"></i> Logout
+  <% end %>
+<% end %>
+<div class='new-group'>
+  <%= form_with(model: @group) do |form| %>
+    <h1> New Group </h1>
+    <div>
+      <%= form.text_field :icon, placeholder: 'Link to icon', required: true, pattern: "^(http|https)://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,}(\/.*)?$" %>
+    </div>
+    <div>
+      <%= form.text_field :name, placeholder: 'Name of group', required: true %>
+    </div>
+    <%= form.submit "Create", class: 'submit-btn' %>
+  <% end %>
+</div>

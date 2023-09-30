@@ -1,0 +1,19 @@
+<% unless content_for?(:nav_bar) %>
+  <nav>
+    <% if content_for?(:page_name) %>
+      <%= link_to yield(:back_path) do %>
+        <i class="fas fa-arrow-left icon-white"></i>
+      <% end %>
+    <% end %>
+
+    <% if content_for?(:page_name) %>  
+      <div>
+        <span class='page-name'> <%= yield(:page_name) %> </span>
+      </div>
+    <% end %>
+
+    <% if content_for?(:nav_button) %>
+      <%= yield(:nav_button) %>
+    <% end %>
+  </nav>
+<% end %>
