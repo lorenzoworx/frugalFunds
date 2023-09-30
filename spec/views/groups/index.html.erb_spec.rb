@@ -4,8 +4,8 @@ RSpec.describe 'Group/Index', type: :system do
   describe 'group index page' do
     before do
       @test_user = User.create(name: 'John', email: 'admin@test.com', password: 'test12')
-      @test_group = Group.create(author: @test_user, name: "test-group", icon: 'https://placehold.co/100x100')
-      Group.create(author: @user, name: "test-group1", icon: 'https://placehold.co/100x100')
+      @test_group = Group.create(author: @test_user, name: 'test-group', icon: 'https://placehold.co/100x100')
+      Group.create(author: @user, name: 'test-group1', icon: 'https://placehold.co/100x100')
       visit groups_path
       fill_in 'Email', with: @test_user.email
       fill_in 'Password', with: @test_user.password

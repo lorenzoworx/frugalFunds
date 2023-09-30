@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Spalsh/Index.', type: :system do
+RSpec.describe 'Splash/Index.', type: :system do
   describe 'splash index page' do
     before do
       visit root_path

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Product/create', type: :system do
   describe 'Create product`` page' do
     before do
-      @test_user = User.create(name: 'Tom', email: 'admin@test.com', password: 'test12' )
+      @test_user = User.create(name: 'John', email: 'admin@test.com', password: 'test12')
       @test_group = Group.create(author: @test_user, name: 'test-group', icon: 'https://placehold.co/100x100')
 
       visit new_group_product_path(@test_group)
@@ -11,7 +11,7 @@ RSpec.describe 'Product/create', type: :system do
       fill_in 'Password', with: @utest_user.password
       click_button 'Log in'
 
-      fill_in 'Name', with: "test-product"
+      fill_in 'Name', with: 'test-product'
       fill_in 'Amount', with: 30
       select @test_group.name, from: 'product_group_ids'
       click_button 'Add Transaction'

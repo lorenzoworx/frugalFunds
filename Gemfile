@@ -7,8 +7,8 @@ ruby '3.2.2'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Add bootstrap to project
-gem "bootstrap"
-gem "sassc-rails"
+gem 'bootstrap'
+gem 'sassc-rails'
 
 # ADD Devise for user authentication
 gem 'devise', github: 'heartcombo/devise', branch: 'main'

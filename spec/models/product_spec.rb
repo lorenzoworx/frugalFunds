@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
-  @test_user = User.create(name: 'Tom', email: 'admin@test.com', password: 'test12' )
+  @test_user = User.create(name: 'John', email: 'admin@test.com', password: 'test12')
   subject { Product.new(author: @test_user, name: 'test-product', amount: 35) }
 
   before { subject.save }

@@ -4,8 +4,8 @@ RSpec.describe 'Group/show', type: :system do
   describe 'group show page' do
     before do
       @test_user = User.create(name: 'John', email: 'admin@test.com', password: 'test12')
-      @test_group = Group.create(author: @test_user, name: "test-group", icon: 'https://placehold.co/100x100')
-      @test_product = Product.new(author: @test_user, name: "test-product", amount: 30, groups: [@test_group])
+      @test_group = Group.create(author: @test_user, name: 'test-group', icon: 'https://placehold.co/100x100')
+      @test_product = Product.new(author: @test_user, name: 'test-product', amount: 30, groups: [@test_group])
 
       @test_product.save
       visit group_path(@test_group)
@@ -22,7 +22,7 @@ RSpec.describe 'Group/show', type: :system do
     it 'Has a group total' do
       expect(page).to have_content('$30.0')
     end
-    it 'When I click on a add category, I am redirected to that category form page.Redirects to the add group page when the add group button is clicked' do
+    it 'Redirects to the add group page when the add group button is clicked' do
       click_button 'Add Group'
       expect(page).to have_current_path(new_group_product_path(@test_group))
     end
