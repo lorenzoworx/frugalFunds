@@ -28,7 +28,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Frugal Funds <a name="about-project"></a>
 
 **Frugal Funds** is a budget management web application designed to help users track their expenses and manage their finances efficiently.
 
@@ -143,6 +143,12 @@ Example:
 - LinkedIn: [Oshoke Okolo](https://www.linkedin.com/in/oshokeokolo/)
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+## 🔭 Future Features <a name="future-features"></a>
+- [x] API authentication
+- [x] API Authorization
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
