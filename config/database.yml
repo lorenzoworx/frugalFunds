@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: frugalFunds_production
   username: frugalFunds
   password: <%= ENV["FRUGALFUNDS_DATABASE_PASSWORD"] %>
